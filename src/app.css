@@ -1,4 +1,12 @@
-*{
-    font-family: Roboto;
-    font-size: medium;
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+
+  font-family: "Architects Daughter", sans-serif;
+  text-align: center;
 }
