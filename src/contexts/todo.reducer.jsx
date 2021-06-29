@@ -1,7 +1,9 @@
 export default function reducer(state, action) {
-
+    const { v4: uuidv4 } = require("uuid");
+    
     const addTodo = (todo) => {
-        let todoItem = { id: state.length + 1, description: todo, done: false };
+        const randomId = uuidv4();
+        let todoItem = { id: state.length + 1, description: todo, done: false, random:randomId };
         return [...state, todoItem];
     }
 
