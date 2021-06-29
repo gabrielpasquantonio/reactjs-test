@@ -8,11 +8,23 @@ export default function reducer(state, action) {
     }
 
     const updateTodo = (todo) => {
-        return state;
+        const updatedTodo = state.map(item => {
+            if (item.id === todo.id) {
+              return todo
+            }
+            return item
+          })
+      
+          return updatedTodo
+        
     };
 
     const deleteTodo = (todo) => {
-        return state;
+        const updatedTodo = state.filter((item ) => {
+            return item .id  !== todo.id;
+          });
+    
+        return updatedTodo
     }
 
     switch (action.type) {

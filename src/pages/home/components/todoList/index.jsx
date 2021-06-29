@@ -4,6 +4,10 @@ import Todo from "../todoItem"
 
 export default function TodoList() {
     const todoContext = useContext(TodoContext);
+
+console.log(todoContext.todo)
+
+
     return (<div>
         {todoContext.todos.map((todo) => (
             <Todo 
