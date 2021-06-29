@@ -9,10 +9,7 @@ import './index.css'
  function Todo({ id, description, done,random }) {
 
     const todoContext = useContext(TodoContext)
-    useEffect(() => {
-        const items = document.querySelectorAll('.item')
-        console.log("this is " + items)
-      }, [])
+   
     const handleDeleteTodo = (e) => {
         e.preventDefault()
         todoContext.dispatch({ type: 'remove', payload: { id } })
@@ -30,7 +27,7 @@ import './index.css'
         <div className={id % 2 ===0?"par":"impar"}>
             <div >
                 <div>{id} - {description}</div>
-                <div>This is the Random id - {random}</div>
+                <div>This is the random id - {random}</div>
                 <Div >Feito? {Done}</Div>
             </div>
             <div >
@@ -39,7 +36,7 @@ import './index.css'
           size='small'
           variant='contained'
           style={done ? { fontSize: 10, opacity: 0 } : { fontSize: 10 }}
-          startIcon={<Check style={{ fontSize: 15 }} />}
+          startIcon={<Check style={{ fontSize: 12 }} />}
           onClick={(e) => handleUpdateTodo(e)}
         >Done</Button>
         <Button

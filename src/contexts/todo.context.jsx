@@ -21,7 +21,7 @@ export default function TodoProvider(props) {
 
 useEffect(() =>{
 localStorage.setItem('todos',JSON.stringify(todos));
-console.log(todos)
+
 },[todos])
 
     return (
