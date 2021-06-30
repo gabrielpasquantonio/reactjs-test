@@ -67,6 +67,8 @@ const Bottom = styled.div`
 const Container = styled.article`
   display: flex;
   justify-content: space-between;
+  cursor:pointer
+
 `;
 const Sim = styled.div`
   color: green;
